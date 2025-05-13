@@ -1,0 +1,186 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
+:root {
+    --rad: 0.7rem;
+    --dur: 0.3s;
+    --color-dark: #2f2f2f;
+    --color-light: #fff;
+    --color-brand: #438d95;
+    --font-fam: "Lato", sans-serif;
+    --height: 5rem;
+    --btn-width: 6rem;
+    --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: rgb(61, 62, 62);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.wrap .searchBar {
+    margin-top: 1rem;
+    display: flex;
+
+}
+
+input {
+    width: 35rem;
+    min-height: 3.6rem;
+    font-size: 1.8rem;
+    border-radius: .8rem;
+    border-end-end-radius: 0rem;
+    border-start-end-radius: 0rem;
+    outline: none;
+    padding-left: 1.2rem;
+}
+
+.btn {
+    width: 10rem;
+    max-height: 3.6rem;
+    font-size: 1.8rem;
+    background-color: rgb(66, 129, 137);
+    border-radius: .8rem;
+    border-bottom-left-radius: 0rem;
+    border-top-left-radius: 0rem;
+    letter-spacing: .2rem;
+    margin-left: -5rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.widget {
+    display: flex;
+    width: 72rem;
+    height: 40rem;
+    flex-wrap: wrap;
+    cursor: pointer;
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3),
+        0 17px 17px 0 rgba(0, 0, 0, 0.15);
+    background-color: var(--color-dark);
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    min-height: fit-content;
+    z-index: 5;
+    border-radius: 8rem;
+}
+
+
+.widget .weatherIcon {
+    flex: 1 100%;
+    height: 50%;
+    margin: 2rem 4rem 0rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 10rem;
+}
+
+.widget .weatherInfo {
+  max-width: 44rem;
+    flex: 0 0 60%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    color: var(--color-light);
+    background-color: black;
+    margin-left: 4rem;
+}
+
+.widget .weatherInfo .temp {
+    font-size: 7rem;
+    letter-spacing: .2rem;
+    padding: 0rem 2rem;
+    font-weight: bold;
+}
+
+.widget .weatherInfo .description {
+    padding: 0 1.5rem 0 .5rem;
+    font-size: 2rem;
+}
+
+.widget .weatherInfo .description .weatherCondition {
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.widget .timeInfo {
+    max-width: 20rem;
+    flex: 0 0 30%;
+    height: 40%;
+    margin-right: 4rem;
+    padding: 2rem;
+    background-color: var(--color-brand);
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-light);
+    display: flex;
+    align-items: center;
+    text-align: center;  
+}
+
+.widget .extraInfo {
+    display: flex;
+    flex: 1 100%;
+    margin: 0rem 4rem 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-color: var(--color-light);
+}
+
+.widget .extraInfo .tempInfoMInMax .twoSidedSection .wi {
+    font-size: 3rem;
+    color: var(--color-brand);
+}
+
+.widget .extraInfo .tempInfoMInMax {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+    width:64rem;
+    min-height: 10rem;
+    align-items: center;
+}
+
+.widget .extraInfo .tempInfoMInMax .twoSidedSection{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 10rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 0rem 1rem;
+}
+
+.widget .extraInfo .tempInfoMInMax .twoSidedSection .extraInfoRightSide{
+    font-size: 1.6rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+.wi {
+  color: black;
+}
