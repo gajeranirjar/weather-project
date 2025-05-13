@@ -9,7 +9,7 @@ const [searchValue , setSearchValue ] = useState('gujarat')
 
   const getWeatherData = async () => {
     try {
-      let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=77786875d9e1834eb6d30b4925f37988`;
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=${import.meta.env.VITE_WEATHERKEY}`;
       const data = await axios.get(url);
       const { data: weatherinfo } = data;
       const {temp , pressure , humidity} = weatherinfo.main ;

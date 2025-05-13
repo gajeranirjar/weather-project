@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 const WeatherCard = ({ temp, pressure, humidity, weathermood, name, speed, sunset, country } ) => {
     const [weatherState, setWeatherState] = useState("");
+    const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
+
     useEffect(()=> {
         if(weathermood){
             switch (weathermood) {
@@ -20,8 +22,15 @@ const WeatherCard = ({ temp, pressure, humidity, weathermood, name, speed, sunse
         }
     },[weathermood])
     
-    let sec = sunset;
-    let date = new Date(sec * 1000);
+    useEffect(() => {
+        const timer = setInterval(() => {
+        setCurrentTime(new Date().toLocaleTimeString());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+    let date = new Date(sunset * 1000);
     let timeStr = `${date.getHours()} : ${date.getMinutes()}`
 
     return (
@@ -43,7 +52,7 @@ const WeatherCard = ({ temp, pressure, humidity, weathermood, name, speed, sunse
                         </div>
                     </div>
                 </div>
-                <div className="timeInfo">{new Date().toLocaleString()}</div>
+                <div className="timeInfo">{currentTime}</div>
                 <div className="extraInfo">
                     <div className="tempInfoMInMax">
                         <div className="twoSidedSection">

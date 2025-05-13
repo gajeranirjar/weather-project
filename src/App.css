@@ -184,3 +184,97 @@ input {
 .wi {
   color: black;
 }
+
+
+
+@media (width <=998px) {
+  html {
+    font-size: 53%;
+    /* 1rem = 9px  */
+  }
+}
+
+@media (width <=900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (width <=750px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .wrap {
+    margin-top: 2rem;
+  }
+
+  .btn {
+    width:9rem;
+  }
+
+  input {
+    width: 30rem;
+  }
+
+
+  .widget {
+    width: 40rem;
+    border-radius: 30rem;
+    padding: 4rem 2rem 1rem;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .widget .weatherIcon {
+    font-size: 4rem;
+    background-color: transparent;
+
+    & .wi {
+      color: var(--color-brand);
+    }
+  }
+
+  .widget .weatherInfo {
+    flex-direction: column;
+    text-align: center;
+    background-color: transparent;
+    margin: 2rem 2rem 0;
+  }
+
+  .widget .weatherInfo .temp {
+    font-size: 4rem;
+    padding-left: 3rem ;
+  }
+
+  .widget .weatherInfo .description .weatherCondition {
+    font-size: 3.2rem;
+  }
+
+  .widget .timeInfo {
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: transparent;
+  }
+
+  .widget .extraInfo {
+    background-color: transparent;
+  }
+
+  .widget .extraInfo .tempInfoMInMax {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .widget .extraInfo .tempInfoMInMax .twoSidedSection {
+    flex-direction: row;
+    gap: 1.8rem;
+    justify-content:center;
+  }
+
+  .widget .extraInfo .tempInfoMInMax .twoSidedSection .extraInfoRightSide {
+    font-size: 1.4rem;
+    color: #fafafa;
+  }
+}
