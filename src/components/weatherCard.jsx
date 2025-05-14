@@ -31,24 +31,24 @@ const WeatherCard = ({ temp, pressure, humidity, weathermood, name, speed, sunse
   }, []);
 
     let date = new Date(sunset * 1000);
-    let timeStr = `${date.getHours()} : ${date.getMinutes()}`
+    let timeStr = `${date.getHours() || 19} : ${date.getMinutes() || 20}`
 
     return (
         <>
             <article className='widget'>
                 <div className="weatherIcon">
-                    <i className={`wi ${weatherState}`}></i>
+                    <i className={`wi ${weatherState || 'wi-day-sunny'}`}></i>
                 </div>
                 <div className="weatherInfo">
                     <div className="temp">
-                        <span>{temp}&deg;</span>
+                        <span>{temp || 25.5}&deg;</span>
                     </div>
                     <div className="description">
                         <div className="weatherCondition">
-                            {weathermood}
+                            {weathermood || "CLEAR"}
                         </div>
                         <div className="place">
-                            {name}, {country}
+                            {name || "Gujarat"}, {country || "IN"}
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ const WeatherCard = ({ temp, pressure, humidity, weathermood, name, speed, sunse
                                 <i className='wi wi-sunset'></i>
                             </p>
                             <p className="extraInfoRightSide">
-                                {timeStr} PM <br />
+                                {timeStr ?? "19 : 15"} PM <br />
                                 Sunset
                             </p>
                         </div>
@@ -69,7 +69,7 @@ const WeatherCard = ({ temp, pressure, humidity, weathermood, name, speed, sunse
                                 <i className='wi wi-humidity'></i>
                             </p>
                             <p className="extraInfoRightSide">
-                                {humidity} <br />
+                                {humidity || 40} <br />
                                 Humidity
                             </p>
                         </div>
@@ -78,7 +78,7 @@ const WeatherCard = ({ temp, pressure, humidity, weathermood, name, speed, sunse
                                 <i className='wi wi-night-alt-thunderstorm'></i>
                             </p>
                             <p className="extraInfoRightSide">
-                                {pressure} <br />
+                                {pressure || 1007} <br />
                                 Pressure
                             </p>
                         </div>
@@ -87,7 +87,7 @@ const WeatherCard = ({ temp, pressure, humidity, weathermood, name, speed, sunse
                                 <i className='wi wi-day-windy'></i>
                             </p>
                             <p className="extraInfoRightSide">
-                                {speed} <br />
+                                {speed || 1.82} <br />
                                 Speed
                             </p>
                         </div>

@@ -99,7 +99,7 @@ input {
 
 .widget .weatherInfo {
   max-width: 44rem;
-    flex: 0 0 60%;
+    flex: 0 0 70%;
     height: 40%;
     display: flex;
     align-items: center;
@@ -220,7 +220,7 @@ input {
 
   .widget {
     width: 40rem;
-    border-radius: 30rem;
+    border-radius: 3rem;
     padding: 4rem 2rem 1rem;
     height: auto;
     box-shadow: none;
