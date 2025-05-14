@@ -203,11 +203,9 @@ input {
 @media (width <=750px) {
   html {
     font-size: 62.5%;
+    height: 100vh;
   }
 
-  .wrap {
-    margin-top: 2rem;
-  }
 
   .btn {
     width:9rem;
