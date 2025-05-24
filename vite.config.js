@@ -11,7 +11,7 @@ export default defineConfig({
       includeAssets: ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
         name: 'Nirjar Gajera Weather App',
-        short_name: 'NirjNext💖⛅',
+        short_name: 'Nirject👉⛅',
         description: 'A simple weather PWA',
         theme_color: '#438d95',
         background_color: '#2f2f2f',
