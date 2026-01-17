@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const WeatherCard = ({ temp, pressure, humidity, weathermood, name, speed, sunset, country } ) => {
     const [weatherState, setWeatherState] = useState("");

@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      includeAssets: ['favicon-16x16.png', 'favicon.ico'],
       manifest: {
         name: 'Nirjar Gajera Weather App',
         short_name: 'Nirject👉⛅',
